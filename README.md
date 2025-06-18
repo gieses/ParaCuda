@@ -61,7 +61,8 @@ Returns:
 2025-06-18 23:48:35 | INFO     | 🧮 Generated 3 parameter combinations
 2025-06-18 23:48:35 | INFO     | Storing results in: control_dir
 2025-06-18 23:48:37 | INFO     | ⚙️ Starting parallel execution                                                                                                                                             
-⏳ Starting... | ✅ 0 | ❌ 0:   0%|                                                                                                                                                          | 0/3 [00:02<?]2025-06-18 23:48:40.455 | INFO     | paracuda.paracuda_run:run_task:148 - 🔍 [DRY RUN] Task 1 on GPU 0: c5b39f71
+⏳ Starting... | ✅ 0 | ❌ 0:   0%|                                                                                                                                                          | 0/3 [00:02<?]
+2025-06-18 23:48:40.455 | INFO     | paracuda.paracuda_run:run_task:148 - 🔍 [DRY RUN] Task 1 on GPU 0: c5b39f71
 2025-06-18 23:48:40.455 | INFO     | paracuda.paracuda_run:run_task:149 - 📝 Command: CUDA_VISIBLE_DEVICES=0 python example/example_script.py --number 1 > control_dir/c5b39f7159270a92961b45aaf8ea44fa.log 2>&1
 2025-06-18 23:48:40.455 | INFO     | paracuda.paracuda_run:run_task:148 - 🔍 [DRY RUN] Task 2 on GPU 1: e360de0c
 2025-06-18 23:48:40.455 | INFO     | paracuda.paracuda_run:run_task:149 - 📝 Command: CUDA_VISIBLE_DEVICES=1 python example/example_script.py --number 2 > control_dir/e360de0cffb59c8b5711943068cee5e2.log 2>&1
