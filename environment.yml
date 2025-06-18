@@ -12,3 +12,4 @@ dependencies:
   - pytorch
   - pandas
   - pyarrow
+  - pytest
