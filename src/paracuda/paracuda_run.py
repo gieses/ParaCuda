@@ -3,7 +3,7 @@
 
 A poor man's parallel grid search execution framework for machine learning experiments.
 
-Anthony is a tool designed to distribute grid search experiments across multiple GPUs.
+ParaCuda is a tool designed to distribute grid search experiments across multiple GPUs.
 It manages parameter combinations, tracks progress, and handles execution of individual
 training runs in parallel to maximize resource utilization.
 
@@ -13,10 +13,7 @@ Usage
 -----
 From the command line:
 
-```bash
-python -m deepsp.runner.anthony --config path/to/params.json --gpus N [OPTIONS]
 ```
-
 Required arguments:
   --config PATH         Path to JSON configuration file
   --gpus N              Number of GPUs to use for parallel execution
@@ -70,7 +67,8 @@ def parse_args():
 	        --gpus (int): Number of GPUs to use.
 	"""
 	parser = argparse.ArgumentParser(
-		description="Run parallel grid search across multiple GPUs"
+		description="Run parallel grid search across multiple GPUs",
+		formatter_class=argparse.ArgumentDefaultsHelpFormatter,
 	)
 	parser.add_argument(
 		"--config", type=str, required=True, help="Path to JSON configuration file"
