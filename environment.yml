@@ -1,0 +1,14 @@
+name: paracuda
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python
+  - ipython
+  - loguru
+  - scikit-learn
+  - tqdm
+  - pytorch
+  - pandas
+  - pyarrow
