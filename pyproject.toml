@@ -1,3 +1,12 @@
+# ---- pytests
+[tool.pytest.ini_options]
+addopts = "--ruff"
+testpaths = ["src"]
+ignore = [
+    "__init__.py",
+    "version.py",
+]
+
 [project]
 name = "ParaCuda"
 version = "0.1.0"
@@ -18,8 +27,7 @@ paracuda = "paracuda.paracuda_run:main"
 
 [tool.ruff]
 # Target formatting and linting
-line-length = 88
-indent-width = 4
+line-length = 120
 target-version = "py38"
 
 # Enable Ruff formatter

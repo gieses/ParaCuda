@@ -70,9 +70,7 @@ def parse_args():
 		description="Run parallel grid search across multiple GPUs",
 		formatter_class=argparse.ArgumentDefaultsHelpFormatter,
 	)
-	parser.add_argument(
-		"--config", type=str, required=True, help="Path to JSON configuration file"
-	)
+	parser.add_argument("--config", type=str, required=True, help="Path to JSON configuration file")
 	parser.add_argument("--gpus", type=int, required=True, help="Number of GPUs to use")
 	parser.add_argument(
 		"--control_dir",
@@ -124,23 +122,17 @@ def run_task(task_info):
 	done_file = output_dir / f"{param_id_hash}.done"
 
 	# Update progress dict to show current task details
-	progress_dict[
-		"current_task"
-	] = f"Task {idx + 1} on GPU {gpu_id}: {param_id_hash[:8]}"
+	progress_dict["current_task"] = f"Task {idx + 1} on GPU {gpu_id}: {param_id_hash[:8]}"
 
 	# Skip if already done and not in dry-run mode
 	if done_file.exists() and not dry_run:
-		logger.info(
-			f"⏩ Skipping completed task ({idx + 1}): {param_id_hash[:8]} [GPU {gpu_id}]"
-		)
+		logger.info(f"⏩ Skipping completed task ({idx + 1}): {param_id_hash[:8]} [GPU {gpu_id}]")
 		# logger.info(f"📝 {param_id}")
 		progress_dict["completed"] += 1
 		return
 
 	# Construct the full command
-	command = (
-		f"CUDA_VISIBLE_DEVICES={gpu_id} {base_command} {param_str} > {log_file} 2>&1"
-	)
+	command = f"CUDA_VISIBLE_DEVICES={gpu_id} {base_command} {param_str} > {log_file} 2>&1"
 
 	if dry_run:
 		# In dry-run mode, just print the command
@@ -244,9 +236,7 @@ def main():
 	tasks = []
 	for idx, params in enumerate(combinations):
 		gpu_id = idx % args.gpus
-		tasks.append(
-			(idx, params, gpu_id, base_command, output_dir, progress_dict, args.dry_run)
-		)
+		tasks.append((idx, params, gpu_id, base_command, output_dir, progress_dict, args.dry_run))
 
 	# Create persistent progress bar
 	pbar = tqdm(
@@ -279,9 +269,7 @@ def main():
 
 	# Print final stats
 	if args.dry_run:
-		logger.success(
-			f"✨ Dry run completed! Printed {progress_dict['completed']} commands"
-		)
+		logger.success(f"✨ Dry run completed! Printed {progress_dict['completed']} commands")
 	else:
 		logger.success(
 			f"✨ All tasks completed! ✅ Success: {progress_dict['completed']} | ❌ Failed: {progress_dict['failed']}"

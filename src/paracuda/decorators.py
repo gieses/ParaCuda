@@ -11,9 +11,11 @@ def set_cuda_visible_devices(gpu_ids):
 	- gpu_ids (str): A comma-separated string of GPU IDs to be made visible to CUDA.
 
 	Usage:
-	with set_cuda_visible_devices("0,1"):
-	    # The following code can now use the specified GPUs
-	    pass
+	        ```python
+	                with set_cuda_visible_devices("0,1"):
+	        # The following code can now use the specified GPUs
+	        pass
+	    ```
 
 	The specified GPUs will be set as visible for the duration of the context.
 	"""

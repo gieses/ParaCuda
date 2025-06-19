@@ -39,9 +39,7 @@ def get_device(device_index: Optional[int] = None) -> torch.device:
 
 	# Ensure the index is within bounds
 	if device_index < 0 or device_index >= device_count:
-		print(
-			f"Warning: Requested device {device_index} out of range (0-{device_count-1}). Using CPU."
-		)
+		print(f"Warning: Requested device {device_index} out of range (0-{device_count - 1}). Using CPU.")
 		return torch.device("cpu")
 
 	return torch.device(f"cuda:{device_index}")
