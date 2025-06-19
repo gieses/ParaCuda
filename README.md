@@ -54,6 +54,16 @@ Example
 Please check the example directory for a simple demonstration of how to write the config and the python script. Note, 
 that per default we generate all possible hyperparameter combinations from the config file to run the defined script.
 
+```json
+{
+  "base_command": "python example/example_script.py",
+  "output_dir": "results_directory",
+  "param_grid": {
+    "number": [1, 2, 3]
+  }
+}
+```
+
 ```
 paracuda --config example/example_config.json --gpus 2 --dry-run
 ```
