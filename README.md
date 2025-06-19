@@ -1,5 +1,7 @@
 # ParaCuda
 
+<img src="assets/paracuda.png" width="400" height="200" alt="paracuda">
+
 ## Overview
 
 **ParaCuda** is a **para**llel **cuda** execution framework for arbitrary tools. Consider it a (very) poor man's version of workflow

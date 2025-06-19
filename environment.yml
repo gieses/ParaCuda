@@ -12,4 +12,7 @@ dependencies:
   - pytorch
   - pandas
   - pyarrow
+  # development dependencies
   - pytest
+  - pre-commit
+  - twine
