@@ -29,7 +29,7 @@ keywords = [
 dependencies = [
     "loguru",
     "tqdm",
-    "pytorch",
+    "torch",
     "pandas",
     "pyarrow",
     "scikit-learn",
