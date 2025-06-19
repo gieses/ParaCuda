@@ -10,13 +10,21 @@ ignore = [
 [project]
 name = "ParaCuda"
 version = "0.1.0"
-description = "ParaCuda - Parallel Execution of CUDA scripts across GPUs."
+description = "ParaCuda - Parallel Execution of CUDA hyperparameter sweeps in Python for pytorch and beyond."
 authors = [
     { name = "Sven Giese", email = "sven.giese88@gmail.com" }
 ]
 license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.9"
+keywords = [
+    "cuda",
+    "parallel",
+    "gpu",
+    "scripting",
+    "execution",
+    "performance",
+]
 
 [project.urls]
 Homepage = "https://github.com/gieses/ParaCuda"
@@ -58,7 +66,7 @@ ignore = [
 classmethod-decorators = ["classmethod", "pydantic.validator"]
 
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]

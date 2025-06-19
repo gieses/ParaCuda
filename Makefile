@@ -27,7 +27,7 @@ install:
 publish:
 	@echo "Publishing package to PyPI..."
 	conda activate $(ENV_NAME) && \
-	python setup.py sdist bdist_wheel && \
+	python -m build && \
 	twine upload dist/*
 
 # Clean up build files

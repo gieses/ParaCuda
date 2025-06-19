@@ -1,5 +1,9 @@
 # ParaCuda
 
+![release](https://flat.badgen.net/github/release/gieses/ParaCuda)
+![tag](https://flat.badgen.net/github/tag/gieses/ParaCuda)
+![PyPI version](https://flat.badgen.net/pypi/v/ParaCuda)
+
 <img src="assets/paracuda.png" width="400" height="200" alt="paracuda">
 
 ## Overview
