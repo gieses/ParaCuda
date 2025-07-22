@@ -231,7 +231,22 @@ def main():
 	progress_dict["completed"] = 0
 	progress_dict["failed"] = 0
 	progress_dict["current_task"] = "Starting..."
-
+	## Prepare tasks with GPU assignments
+	# tasks = []
+	# Get list of available GPU IDs (could be obtained from system)
+	# available_gpu_ids = list(range(8))  # [0, 1, 2, ..., args.gpus-1]
+	# for idx, params in enumerate(combinations):
+	# 	gpu_id = available_gpu_ids[idx % len(available_gpu_ids)]
+	# 	tasks.append(
+	# 		(
+	# 			idx,
+	# 			params,
+	# 			gpu_id,
+	# 			base_command,
+	# 			output_dir,
+	# 			progress_dict,
+	# 		)
+	# 	)
 	# Prepare tasks with GPU assignments
 	tasks = []
 	for idx, params in enumerate(combinations):
